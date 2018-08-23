@@ -1,3 +1,9 @@
+0.002   2018-08-23 (PERLANCAR)
+
+	- Coerce rule str_to_isbn10 can now convert from ISBN 13, much like
+	  str_to_isbn13 rule which can convert from ISBN 10.
+
+
 0.001   2018-08-23 (PERLANCAR)
 
         - First release.
