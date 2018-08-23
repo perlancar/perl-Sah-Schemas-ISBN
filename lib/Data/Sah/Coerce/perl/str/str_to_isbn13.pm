@@ -32,7 +32,7 @@ sub coerce {
         "do { my \$digits = $dt; \$digits =~ s/[^0-9Xx]//g; ",
         "my \$res; ",
         "{ ",
-        "  if (length \$digits == 10) { \$digits = Algorithm::CheckDigits::CheckDigits('ean')->complete('978' . substr(\$digits, 0, 9)); \$res = [undef, \$digits]; last } ",
+        "  if (length \$digits == 10) { \$digits = Algorithm::CheckDigits::CheckDigits('ean')->complete('978' . substr(\$digits, 0, 9)); \$res = [undef, \$digits]; last } ", # convert from ISBN 10
         "  if (length \$digits != 13) { \$res = ['ISBN 13 must have 13 digits']; last } ",
         "  unless (Algorithm::CheckDigits::CheckDigits('ean')->is_valid(\$digits)) { \$res = ['Invalid checksum digit']; last } ",
         "  \$res = [undef, \$digits]; ",
