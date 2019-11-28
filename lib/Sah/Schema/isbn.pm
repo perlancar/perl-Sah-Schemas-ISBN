@@ -1,6 +1,8 @@
 package Sah::Schema::isbn;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 our $schema = [str => {
@@ -13,7 +15,7 @@ Checksum digit must be valid.
 
 _
     match => '\A(?:[0-9]{13}|[0-9]{9}[0-9Xx])\z',
-    'x.perl.coerce_rules' => ['str_to_isbn'],
+    'x.perl.coerce_rules' => ['From_str::to_isbn'],
 }, {}];
 
 1;

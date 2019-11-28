@@ -1,6 +1,8 @@
 package Sah::Schema::isbn13;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 our $schema = [str => {
@@ -16,7 +18,7 @@ ISBN 10.
 
 _
     match => '\A[0-9]{13}\z',
-    'x.perl.coerce_rules' => ['str_to_isbn13'],
+    'x.perl.coerce_rules' => ['From_str::to_isbn13'],
 }, {}];
 
 1;

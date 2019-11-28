@@ -1,6 +1,8 @@
-package Data::Sah::Coerce::perl::str::str_to_isbn10;
+package Data::Sah::Coerce::perl::To_str::From_str::to_isbn10;
 
+# AUTHOR
 # DATE
+# DIST
 # VERSION
 
 use 5.010001;
@@ -10,6 +12,7 @@ use warnings;
 sub meta {
     +{
         v => 4,
+        summary => 'Check and format ISBN 10 number from string',
         might_fail => 1,
         prio => 50,
     };
@@ -43,12 +46,6 @@ sub coerce {
 }
 
 1;
-# ABSTRACT: Check and format ISBN 10 number from string
+# ABSTRACT:
 
 =for Pod::Coverage ^(meta|coerce)$
-
-=head1 DESCRIPTION
-
-The rule is not enabled by default. You can enable it in a schema using e.g.:
-
- ["str", "x.perl.coerce_rules"=>["str_to_isbn10"]]
